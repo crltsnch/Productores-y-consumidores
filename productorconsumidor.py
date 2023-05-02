@@ -57,4 +57,14 @@ class Consumidor(threading.Thread):
                     print(f"Buffer vacio consumidor {self.nombre} esperando a que el productor agregue elementos")
         
             time.sleep(random.random())   #esperamos un tiepo aleatorio antes de generar el siguiente elemento
-          
+
+#Creamos 3 productores y 3 consumidores
+def main():
+    #Creamos una lista para almacenar los productoes y los consumidores
+    productores = []
+    consumidores = []
+
+    #Creamos 3 productores y 3 consumidores y los agregamos a sus respectivas listas
+    for i in range(3):
+        productore = Productor(name = f"Productor {i+1}")
+        productores
