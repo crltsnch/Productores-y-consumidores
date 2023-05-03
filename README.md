@@ -5,7 +5,7 @@ El link a mi repositorio es: [GitHub](https://github.com/crltsnch/Productores-y-
 # En que consiste
 
 Este ejercicio consiste en que el productor aporta unos elementos y el consumidor hace uso de esos elementos, el problema está en si el productor provee más rápido de lo que el consumidor puede aceptar o si el consumidor consume más rápido que lo que el productor puede aportar.
-Este problema lo resolvemos con una gestión correcta de los recursos en equilibrio (sincronización entre consumidor y productor) para evitar interbloqueo o exclusión mutua. Yo lo he resuelto con hilos y para asegurar que solo un hilo accedar al buffer he utilizado el objeto lock.
+Este problema lo resolvemos con una gestión correcta de los recursos en equilibrio (sincronización entre consumidor y productor) para evitar interbloqueo o exclusión mutua. Yo lo he resuelto con hilos y para asegurar que solo un hilo acceda al buffer he utilizado el objeto lock.
 
 # Archivo `productorconsumidor.py`
 
@@ -71,7 +71,7 @@ class Consumidor(threading.Thread):
             time.sleep(random.random())   #esperamos un tiepo aleatorio antes de generar el siguiente elemento
 ```
 
-# Archivo `main.py``
+# Archivo `main.py`
 
 ```
 from productorconsumidor import *
